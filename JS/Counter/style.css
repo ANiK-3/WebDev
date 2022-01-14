@@ -16,6 +16,7 @@ html {
   height: 100vh;
   display: grid;
   place-items: center;
+  user-select: none;
 }
 
 h1,
@@ -40,25 +41,38 @@ span {
   place-items: center;
   min-height: 70vh;
   cursor: pointer;
-  gap: 1rem;
+  gap: 4rem;
 }
 
 .button-container {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .btn {
+  flex: 1;
+  margin: 10px;
   background-color: rgb(223, 165, 57);
   border: none;
   border-radius: 10px;
-  padding: 7px 10px;
+  padding: 10px 15px;
   outline: none;
-  user-select: none;
   transition: 0.3s ease-in;
 }
 
 .btn:hover,
 .btn:focus {
   transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .decrease {
+    order: 1;
+  }
+  .increase {
+    order: 2;
+  }
+  .reset {
+    order: 3;
+  }
 }

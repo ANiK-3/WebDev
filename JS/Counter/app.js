@@ -35,5 +35,3 @@ container.addEventListener("mouseleave", () => {
     btn.style.backgroundColor = "rgb(223, 165, 57)";
   });
 });
-
-console.log(Hello);
