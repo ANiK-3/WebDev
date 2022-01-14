@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url(./bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  user-select: none;
+}
+
+h1,
+span {
+  color: rgb(223, 165, 57);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+button {
+  font-weight: bold;
+}
+
+span {
+  font-size: 4rem;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  min-height: 70vh;
+  cursor: pointer;
+  gap: 4rem;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn {
+  flex: 1;
+  margin: 10px;
+  background-color: rgb(223, 165, 57);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  outline: none;
+  transition: 0.3s ease-in;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .decrease {
+    order: 1;
+  }
+  .increase {
+    order: 2;
+  }
+  .reset {
+    order: 3;
+  }
+}
